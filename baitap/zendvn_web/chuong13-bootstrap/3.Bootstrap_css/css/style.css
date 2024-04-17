@@ -1,0 +1,10 @@
+
+div.container div.row > div{
+    background-color: rgb(146, 235, 235);
+    border: 1px solid black;
+}
+div.my-row{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+

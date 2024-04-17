@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 600px;
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    height: 200px;
+    background-image: url(../IMAGE/banner_car.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section {
+    height: 400px;
+    width: 70%;
+    float: left;
+}
+
+.sectionLeft {
+    height: 250px;
+    width: 40%;
+    float: left;
+}
+
+.sectionLeft table tr td {
+    text-align: center;
+    padding: 20px;
+    font-weight: 900;
+    border: 1px solid grey;
+}
+
+.sectionRight {
+    height: 200px;
+    width: 60%;
+    float: left;
+}
+
+.sectionRight table tr td {
+    padding: 10px;
+    font-weight: 900;
+    background-color: darkgrey;
+}
+
+.sectionRight table tr td input {
+    padding: 5px;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+
+aside {
+    height: 400px;
+    width: 30%;
+    float: left;
+}
+
+aside table tr td {
+    text-align: center;
+    padding: 10px;
+    font-weight: 900;
+    border: 1px solid grey;
+}

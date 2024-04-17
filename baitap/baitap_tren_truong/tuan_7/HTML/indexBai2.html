@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styleBai2.css">
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div class="container">
+        <header>
+        </header>
+        <div class="content">
+            <section>
+                <div class="sectionLeft">
+                    <form action="">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td colspan="2" style="background-color: grey; width: 100%; color: blue;">Bảng tin thị trường</td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="background-color: darkgrey; width: 100%; color: rgb(44, 97, 196);">Vàng</td>
+
+                            </tr>
+                            <tr>
+                                <td style="color: cornflowerblue;">Mua vào</td>
+                                <td style="color: cornflowerblue;">Bán ra</td>
+                            </tr>
+                            <tr>
+                                <td id="vangMV"></td>
+                                <td id="vangBR"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="background-color: darkgrey; width: 100%; color: rgb(44, 97, 196);">USD</td>
+
+                            </tr>
+                            <tr>
+                                <td style="color: cornflowerblue;">Mua vào</td>
+                                <td style="color: cornflowerblue;">Bán ra</td>
+                            </tr>
+                            <tr>
+                                <td id="usdMV"></td>
+                                <td id="usdBR"></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div class="sectionRight">
+                    <form action="">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td colspan="2" style="color: blue; text-align: center;">Cập nhật giá thị trường</td>
+
+                            </tr>
+                            <tr>
+                                <td>Mua vào</td>
+                                <td><input type="text" name="" id="tMua"></td>
+                            </tr>
+                            <tr>
+                                <td>Bán ra</td>
+                                <td><input type="text" name="" id="tBan"></td>
+                            </tr>
+                            <tr>
+                                <td>Loại xe</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="Toyota">Toyota</option>
+                                        <option value="Mercedes">Mercedes</option>
+                                        <option value="Lamborghini">Lamborghini</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input type="radio" name="nt" id="radioVang">Vàng
+                                    <input type="radio" name="nt" id="radioUSD">USD
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input type="button" name="" id="update" value="Update">
+                                    <input type="submit" name="" id="state" value="State">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </section>
+            <aside>
+                <form action="">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="color:blue; background-color: gray;">Bảng báo giá</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p style="color: deepskyblue;">
+                                    - Với kiểu dáng thể thao, sang trọng <br> - Nổi bật, ít tốn nhiên liệu <br> - Kiểu dáng thể thao
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: darkgrey;"><img src="../IMAGE/car1.jpg" alt="" width="50%"></td>
+                        </tr>
+                        <tr>
+                            <td style="color: forestgreen;">Gía: 35000 USD</td>
+                        </tr>
+                    </table>
+                </form>
+            </aside>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#update").click(function() {
+                var m = document.getElementById("tMua").value;
+                var n = document.getElementById("tBan").value;
+                var ngoaite = $('[name="nt"]:radio:checked');
+                if (ngoaite == "Vàng") {
+                    vangMV.innerHTML = m;
+                    vangBR.innerHTML = n;
+                } else {
+                    usdMV.innerHTML = m;
+                    usdBR.innerHTML = n;
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>

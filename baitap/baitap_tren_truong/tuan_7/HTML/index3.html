@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styleBai3.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="color: blue; text-align: center;">Register Form</h1>
+        <form action="" onsubmit="return validationForm()">
+            <table style="width: 100%;">
+                <tr>
+                    <td>Họ và tên(*):</td>
+                    <td><input type="text" name="name" id="" required></td>
+                </tr>
+                <tr>
+                    <td>Tên đăng nhập(*):</td>
+                    <td><input type="text" name="username" id="" required></td>
+                </tr>
+                <tr>
+                    <td>Mật khẩu(*):</td>
+                    <td><input type="text" name="" id="" required></td>
+                </tr>
+                <tr>
+                    <td>Xác nhận mật khẩu(*):</td>
+                    <td><input type="text" name="" id="" required></td>
+                </tr>
+                <tr>
+                    <td>Ngày sinh:</td>
+                    <td><input type="datetime" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Điện thoại:</td>
+                    <td><input type="text" name="tele" id=""></td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ:</td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Email khác:</td>
+                    <td><input type="text" name="email" id=""></td>
+                </tr>
+                <tr>
+                    <td>Sở thích</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="Ca nhạc">Ca nhac</option>
+                            <option value="Nhảy múa">Nhay mua</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" name="" id="" value="Đăng ký">
+                        <input type="button" name="" id="" value="Hủy">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        function validationForm() {
+            var checkName = document.getElementsByName("name");
+            var checkUser = document.getElementsByName("username")
+            var checkTele = document.getElementsByName("tele")
+            var checkEmail = document.getElementsByName("email")
+            var regName = /[^(A-za-z )+$]/;
+            var regUserName = /[^(A-za-z){6}$]/
+            var regTele = /[^(0-9 ){10}+$]/
+            var regEmail = /[^(A-za-z)@gmail.com$]/
+            if (regName.test(checkName)) {
+
+            }
+            if (regUserName.test(checkUser)) {
+
+            }
+            if (regTele.test(checkTele)) {
+
+            }
+            if (regEmail.test(checkEmail)) {
+
+            }
+        }
+    </script>
+</body>
+
+</html>

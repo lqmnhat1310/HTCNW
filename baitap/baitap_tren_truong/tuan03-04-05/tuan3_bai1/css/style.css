@@ -1,0 +1,97 @@
+
+.container{
+   background: linear-gradient(to bottom, #b3e0ff, #0073e6);
+   width: 100%;
+   min-height: 500px;
+   padding: 8px;
+}
+/* -----------------------------header---------------------------------- */
+.header{
+   position: relative;
+}
+.super-title{
+   color: white;
+   font-weight:bold;
+   font-size:30px;
+   font-family: Arial, Helvetica, sans-serif;
+   position: absolute;
+   right: 20px;
+   top: 10px;
+   text-shadow: 2px 12px 10px rgba(16, 31, 97, 0.5);
+
+}
+.menu .list-menu li{
+   text-decoration: none;
+   list-style: none;
+}
+.menu .list-menu .item{
+   float: left;
+   margin: 20px;
+   color: white;
+   font-size: 20px;
+   font-weight: bold;
+   display:inline;
+}
+.menu .list-menu .item:hover{
+   text-decoration: underline;
+   color: red;
+}
+/* -----------------------------center---------------------------------- */
+.center{
+   margin-top: 40px;
+   margin-bottom: 40px;
+}
+.left{
+   float: left;
+   width: 47%;
+   padding-right: 5px;
+   position: relative;
+   color: white;
+}
+.title1{
+   color: white;
+}
+.text-title1{
+   color: white;
+}
+.right{
+   float: right;
+   width: 47%;
+}
+.image {
+   width: 500px; /* Độ rộng mong muốn */
+   height: auto; /* Để tỷ lệ khung hình tự động điều chỉnh */
+ }
+ .title2{
+   margin-left: 50px;
+   font-size: 21px;
+   text-shadow: 1px 2px 1px #024281;
+   color: blue;
+   font-weight: bolder;
+ }
+.input-item span{
+   float: left;
+   width: 50%;
+   margin-bottom: px;
+}
+.info-item{
+   float: right;
+   width: 49%;
+   margin-bottom: 1px;
+   border-radius: 3px;
+}
+#field-6{
+   height: 50px;
+}
+.select{
+   position: absolute;
+   bottom: -20px;
+   right: 156px;
+}
+/* -----------------------------footer---------------------------------- */
+.bottom{
+   margin-top: 20px;
+   color: white;
+   text-align: center;
+   font-weight: bold;
+}

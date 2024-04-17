@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center; font-weight: 700;">ĐĂNG KÝ TÀI KHOẢN</h1>
+        <form action="">
+            <div class="row">
+                <div class="col">
+                    <label for="ten" class="form-label">Tên đăng nhập:<span id="errUsername" style="color: red;">(*)</span></label>
+                    <input type="text" name="" id="ten" placeholder="txtDN" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="mk" class="form-label">Mật khẩu:<span id="errMK" style="color: red;">(*)</span></label>
+                    <input type="password" name="" id="mk" placeholder="txtMK" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="nlmk" class="form-label">Nhập lại mật khẩu:<span id="errNLMK" style="color: red;">(*)</span></label>
+                    <input type="password" name="" id="nlmk" placeholder="txtXNMK" class="form-control">
+                </div>
+            </div>
+        </form>
+        <h3 style="text-align: center;">THÔNG TIN CÁ NHÂN</h3>
+        <form action="">
+            <div class="row">
+                <div class="col">
+                    <label for="hovaten" class="form-label">Họ và tên:<span id="errHVT" style="color: red;">(*)bắt buộc</span></label>
+                    <input type="text" name="" id="hovaten" placeholder="txtName" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="birthday" class="form-label">Ngày sinh:<span id="errBD" style="color: red;">(*)</span></label>
+                    <input type="date" name="" id="birthday" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="genes" class="form-label">Giới tính:</label>
+                    <input type="radio" name="Nam" id="genes" class="form-check-inline">Nam
+                    <input type="radio" name="Nữ" id="genes" class="form-check-inline">Nữ
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="dc" class="form-label">Địa chỉ:<span id="errDC" style="color: red;">(*)</span></label>
+                    <input type="text" name="" id="dc" placeholder="txtDC" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="phone" class="form-label">Điện thoại:<span id="errDT" style="color: red;">phải là số</span></label>
+                    <input type="number" name="" id="phone" placeholder="txtDT" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="mail" class="form-label">Email:<span id="errMail" style="color: red;">nhập đúng địa chỉ email</span></label>
+                    <input type="text" name="" id="mail" placeholder="txtEmail" class="form-control">
+                </div>
+            </div>
+            <div class="but" style="text-align: center;">
+                <button type="button" class="btn btn-dark">Đăng ký</button>
+                <button type="button" class="btn btn-dark">Hủy</button>
+            </div>
+        </form>
+        <script>
+            $(document).ready(function() {
+                $("#ten").blur(function() {
+                    var user = document.getElementById("ten").value;
+                    var regUser = /^[a-zA-Z][a-zA-Z(0-9)]*$/
+                    if (regUser.test(user) == false)
+                        errUsername.innerHTML = "Tên sai dữ liệu"
+                    else
+                        errUsername.innerHTML = "";
+                })
+
+                $("#mk").blur(function() {
+                    var matKhau = document.getElementById("mk").value;
+                    var regMK = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&*+=])(?=.{8,})/
+                    if (regMK.test(matKhau) == false)
+                        errMK.innerHTML = "Mật khẩu sai dữ liệu"
+                    else
+                        errMK.innerHTML = "";
+                })
+                $("#nlmk").blur(function() {
+                    var matKhau = document.getElementById("mk").value;
+                    var matKhauNhapLai = document.getElementById("nlmk").value;
+                    if (matKhauNhapLai != matKhau)
+                        errNLMK.innerHTML = "Mật khẩu không trùng khớp"
+                    else
+                        errNLMK.innerHTML = "";
+                })
+                $("#hovaten").blur(function() {
+                    var ht = document.getElementById("hovaten").value;
+                    var regHT = /^[A-Z][a-z ]+[A-Z][a-z ]+[A-Z][a-z ]+$/
+                    if (regHT.test(ht) == false)
+                        errHVT.innerHTML = "Họ và tên sai dữ liệu";
+                    else
+                        errHVT.innerHTML = "";
+                })
+                $("#birthday").blur( function(){
+                var ngaySinh = document.getElementById("birthday").value;
+                var date = new Date();
+                var minDate = new Date(date.getFullYear()-18, date.getMonth(), date.getDate());
+                if(ngaySinh.trim()=="")
+                    errBD.innerHTML='Không được để trống';
+                else if(new Date(ngaySinh)>minDate)
+                    errBD.innerHTML='Yêu cầu lớn hơn 18 tuổi';
+                else
+                    errBD.innerHTML ="";
+            }) 
+                $("#dc").blur(function() {
+                    var diaChi = document.getElementById("dc").value;
+                    if (diaChi == null || diaChi =="")
+                        errDC.innerHTML = "Địa chỉ không được để trống";
+                    else
+                        errDC.innerHTML = "";
+                })
+                $("#phone").blur(function() {
+                    var ph = document.getElementById("phone").value;
+                    var regPhone = /^(0[345679][0-9]{8})$/
+                    if (ph == null || ph=="")
+                        errDT.innerHTML = "Điện thoại không để trống";
+                    else if (regPhone.test(ph)==false)
+                        errDT.innerHTML = "Điện thoại sai dữ liệu";
+                    else
+                    errDT.innerHTML ="";
+                })
+                $("#email").blur(function() {
+                    
+                })
+            })
+        </script>
+    </div>
+</body>
+
+</html>

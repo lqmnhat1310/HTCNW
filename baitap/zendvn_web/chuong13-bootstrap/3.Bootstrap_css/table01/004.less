@@ -1,0 +1,32 @@
+@import url(../less/bootstrap.less);
+.my-table{
+    .table;
+    .table-condensed;
+    .table-striped;
+    .table-bordered;
+    .table-hover;
+    thead{
+        th{
+            .text-center;
+        }
+    }
+    tbody{
+        tr{
+            td:nth-child(1){
+                width: 5%;
+                .text-center;
+            }
+            td:nth-child(2){
+                width: 15%;
+                .text-center;
+            }
+            td:nth-child(3){
+                width: 80%;
+                .text-justify;
+            }
+        }
+    }
+}
+.my-table > tbody > tr:hover {
+    background-color: #dd7f7f;
+  }

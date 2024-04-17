@@ -1,0 +1,24 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  margin: 10px auto;
+  width: 100%;
+}
+.container > div {
+  min-height: 30px;
+  margin-bottom: 20px;
+}
+.class1 {
+  height: 200px;
+  line-height: 100px;
+  background-color: #50a0be;
+  color: red;
+}
+.class2 {
+  height: 400px;
+  line-height: 200px;
+  background-color: #50a0be;
+  color: yellow;
+}

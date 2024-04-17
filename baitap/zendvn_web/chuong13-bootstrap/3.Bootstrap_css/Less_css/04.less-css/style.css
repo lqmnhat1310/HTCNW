@@ -1,0 +1,22 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+div.container {
+  margin: 10px auto;
+  width: 100%;
+}
+div.container div.class1 {
+  height: 50px;
+  line-height: 50px;
+  background-color: #50a0be;
+  color: #f9f7f4;
+  min-height: 30px;
+  margin-bottom: 20px;
+}
+div.container div.class1 a {
+  color: color;
+}
+div.container div.class1 a:hover {
+  font-weight: bold;
+}

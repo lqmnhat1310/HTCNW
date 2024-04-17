@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/less.js"></script>
+</head>
+<body>
+    <!-- 
+        thay đổi kích thước của 1 ô input
+        class: .input-lg, input-sm
+        custom 
+        help text help-block
+        disable
+    -->
+    <div class="container">
+        <div class="row my-row">
+            <p class="col-md-5">
+                <input type="text" placeholder="col-md-5" class="form-control">
+            </p>
+            <p class="col-md-4">
+                <input type="text" placeholder="input-lg" class="form-control input-lg">
+            </p>
+            <p class="col-md-3">
+                <input type="text" placeholder="input-sm" class="form-control input-sm">
+            </p>
+        </div>
+        <div class="row my-row">
+            <p>
+                <input type="text" placeholder="col-md-5" class="form-control">
+                <span class="help-block">this is description</span>
+            </p>
+        </div>
+        <div class="row my-row">
+            <p><input type="text" class="form-control" disabled></p>
+            <p>
+                <select class="form-control" disabled>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                </select>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
